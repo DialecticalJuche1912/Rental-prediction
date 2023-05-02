@@ -117,3 +117,28 @@ plt.plot(y_train,line2(y_train), '#E71')
 plt.ylabel('Predicted Price of Housing')
 plt.xlabel('Actual Price of Housing')
 
+def predict_price(unit_type, ref_date, model):
+    unit_mapping = {'Bachelor units': 1, 'One bedroom units': 1, 'Two bedroom units': 2, 'Three bedroom units': 3}
+    if unit_type in unit_mapping:
+        unit_num = unit_mapping[unit_type]
+    else:
+        print("Invalid unit type. Please enter 'Bachelor units', 'One bedroom units', 'Two bedroom units', or 'Three bedroom units'.")
+        return
+
+    input_data = pd.DataFrame({'REF_DATE': [ref_date], 'Number of units': [unit_num]})
+    predicted_price = model.predict(input_data)
+
+    return predicted_price[0]
+  
+if __name__ == "__main__":
+    unit_type_input = input("Enter the unit type (Bachelor units, One bedroom units, Two bedroom units, or Three bedroom units): ")
+    ref_date_input = int(input("Enter the reference date (e.g., 202101 for January 2021): "))
+
+    # You can choose either the Linear Regression model (lr) or the Random Forest model (rf) for prediction
+    predicted_price = predict_price(unit_type_input, ref_date_input, lr)
+
+    print(f"The predicted price for a {unit_type_input} at reference date {ref_date_input} is: ${predicted_price:.2f}")
+
+
+  
+
