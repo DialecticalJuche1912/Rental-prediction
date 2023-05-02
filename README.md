@@ -10,6 +10,8 @@ The code takes user input for unit type and reference date and returns the predi
 3. Open the Python script in your preferred text editor or IDE.
 4. Run the script and input your desired unit type and date 
 
+You can Open and view the project using the .zip file provided or at my [Github Repo](https://github.com/DialecticalJuche1912/Rental-prediction)
+
 
 ## Acknowledgement
 This renting info is from [Government of Canada]('https://open.canada.ca/data/en/dataset/13425ff1-aa23-495f-a80d-7178af53bc84') 
