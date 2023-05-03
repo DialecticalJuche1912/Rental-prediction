@@ -19,4 +19,4 @@ The following libraries are used in this program:
 3. scikit-learn (imported as sklearn): Various functions used in the data manipulation and supervised learning process such as splitting the data as well as training the differentiated sets.
 
 ## Acknowledgement
-This renting info is from [Government of Canada]('https://open.canada.ca/data/en/dataset/13425ff1-aa23-495f-a80d-7178af53bc84') 
+This renting info is from [Government of Canada](https://open.canada.ca/data/en/dataset/13425ff1-aa23-495f-a80d-7178af53bc84) 
